@@ -9,6 +9,7 @@ namespace ViewModels
 {
     public class MainWindowViewModel
     {
+        IController _controller;
         public RelayCommand HomeCommand { get; private set; }
         public RelayCommand ReceitasCommand { get; private set; }
         public RelayCommand DespesasCommand { get; private set; }
@@ -17,8 +18,9 @@ namespace ViewModels
         public RelayCommand CadUserCommand { get; private set; }
         public RelayCommand LogsCommand { get; private set; }
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IController controller)
         {
+            this._controller = controller;
             HomeCommand = new RelayCommand(Home);
             ReceitasCommand = new RelayCommand(Receitas);
             DespesasCommand = new RelayCommand(Despesas);
@@ -60,7 +62,7 @@ namespace ViewModels
 
         public void Close()
         {
-            Application.Current.MainWindow.Close();
+            Application.Current.Shutdown();
         }
     }
 }

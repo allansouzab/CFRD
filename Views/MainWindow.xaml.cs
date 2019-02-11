@@ -24,7 +24,8 @@ namespace Views
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            IController controller = new Controller();
+            DataContext = new MainWindowViewModel(controller);
         }
     }
 }

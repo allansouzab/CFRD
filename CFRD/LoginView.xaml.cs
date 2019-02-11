@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ViewModels;
+using Views;
 
 namespace CFRD
 {
@@ -22,6 +24,23 @@ namespace CFRD
         public LoginView()
         {
             InitializeComponent();
+            //IController controller = new Controller();
+            //LoginViewModel vm = new LoginViewModel(controller);
+            //DataContext = vm;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var email = txtEmail.Text.ToString();
+            var senha = txtSenha.Password.ToString();
+
+            if(email == "admin" && senha == "admin")
+            {
+                MainWindow mw = new MainWindow();
+                mw.Show();
+
+                this.Close();
+            }
         }
     }
 }
