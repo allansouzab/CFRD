@@ -1,0 +1,81 @@
+﻿<Window x:Class="Controle_Financeiro.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controle_Financeiro.Views"
+        xmlns:localVMs="clr-namespace:Controle_Financeiro.ViewModels"
+        xmlns:localModels="clr-namespace:Controle_Financeiro.Models"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+        md:DialogServiceViews.IsRegistered="True"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Height="350" Width="525"
+        WindowState="Maximized" ResizeMode="CanMinimize">
+
+    <Window.Resources>
+        <!-- Insert here your Data Templates -->
+        <DataTemplate x:Key="SampleTemplate">
+            <StackPanel/>
+        </DataTemplate>
+        
+    </Window.Resources>
+    <!--<Window.InputBindings>
+        --><!-- Example of Keyboard shortcuts --><!--
+        <KeyBinding Command="{Binding SaveCmd}" Key="S" Modifiers="Ctrl" />
+        <KeyBinding Command="{Binding SaveAsCmd}" Gesture="Ctrl+Shift+S" />
+        <KeyBinding Command="{Binding OpenCmd}" Gesture="Ctrl+O" />
+        <KeyBinding Command="{Binding NewCmd}" Gesture="Ctrl+N" />
+        <KeyBinding Command="{Binding ExitCmd}" Gesture="Alt+F4" />
+    </Window.InputBindings>-->
+
+    <Grid>
+        <!-- File Menu -->
+        <!--<Menu DockPanel.Dock="Top" Margin="0,0,0.4,0">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Command="{Binding NewCmd}" InputGestureText="Ctrl+N" />
+                <MenuItem Header="Open" Command="{Binding OpenCmd}" InputGestureText="Ctrl+O" />
+                <MenuItem Header="Save" Command="{Binding SaveCmd}" InputGestureText="Ctrl+S" />
+                <MenuItem Header="Save As" Command="{Binding SaveAsCmd}" InputGestureText="Ctrl+Shift+S"/>
+                <Separator />
+                <MenuItem Header="Exit" Command="{Binding ExitCmd}" InputGestureText="Alt+F4"/>
+            </MenuItem>
+            <MenuItem Header="About" Command="{Binding ShowAboutDialogCmd}"/>
+        </Menu>-->
+
+        <Ribbon>
+            <RibbonTab Header="Inicio">
+                <RibbonGroup x:Name="HomeGroup" Header="Inicio">
+                    <RibbonButton LargeImageSource="Resources/iconfinder_back_house_window-home_2222745.png" ToolTip="Navegar para página inicial" Label="Home" Command="{Binding Path=HomeCommand}" />
+                </RibbonGroup>
+                <RibbonGroup x:Name="ReceitasGroup" Header="Receitas">
+                    <RibbonButton LargeImageSource="Resources/atm-1.png" ToolTip="Exibir e cadastrar novas receitas" Label="Receitas" Command="{Binding Path=ReceitasCommand}" />
+                </RibbonGroup>
+                <RibbonGroup x:Name="DespesasGroup" Header="Despesas">
+                    <RibbonButton LargeImageSource="Resources/atm-2.png" ToolTip="Exibir e cadastrar novas despesas" Label="Despesas" Command="{Binding Path=DespesasCommand}"/>
+                </RibbonGroup>
+                <RibbonGroup x:Name="RelatoriosGroup" Header="Relatórios">
+                    <RibbonButton LargeImageSource="Resources/presentation.png" ToolTip="Exibir e exportar relatório geral do mês" Label="Relatório Geral" Command="{Binding Path=RelatorioCommand}"/>
+                </RibbonGroup>
+                <RibbonGroup x:Name="SairGroup" Header="Sair">
+                    <RibbonButton LargeImageSource="Resources/iconfinder_button_blue_stop_40721.png" ToolTip="Fechar aplicação" Label="Fechar" Command="{Binding Path=CloseCommand}" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="Administração">
+                <RibbonGroup x:Name="HomeGroupAdm" Header="Inicio">
+                    <RibbonButton LargeImageSource="Resources/iconfinder_back_house_window-home_2222745.png" ToolTip="Navegar para página inicial" Label="Home" Command="{Binding Path=HomeCommand}" />
+                </RibbonGroup>
+                <RibbonGroup x:Name="AdministracaoGroup" Header="Administração">
+                    <RibbonButton LargeImageSource="Resources/network.png" ToolTip="Cadastrar novo usuário para acesso ao sistema" Label="Cadastrar Usuário" Command="{Binding Path=CadUserCommand}" />
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+
+        <StackPanel>
+            <Image Source="Resources/lovesnacks_logo.jpg" Margin="0, 250" Width="400" Opacity="0.1"/>
+            <!-- Place here your content -->
+        </StackPanel>
+    </Grid>
+</Window>
