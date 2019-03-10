@@ -43,5 +43,16 @@ namespace Controle_Financeiro.Views
             */
             Log.Info("Closing App");
         }
+
+        private void RibbonButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 w = new Window1();
+            w.ShowDialog();
+        }
+
+        private void btnFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

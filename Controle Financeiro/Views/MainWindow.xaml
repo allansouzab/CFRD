@@ -14,6 +14,10 @@
         Title="{Binding Title}" Height="350" Width="525"
         WindowState="Maximized" ResizeMode="CanMinimize">
 
+    <Window.DataContext>
+        <localVMs:MainViewModel/>
+    </Window.DataContext>
+
     <Window.Resources>
         <!-- Insert here your Data Templates -->
         <DataTemplate x:Key="SampleTemplate">
@@ -59,8 +63,11 @@
                     <RibbonButton LargeImageSource="Resources/presentation.png" ToolTip="Exibir e exportar relatório geral do mês" Label="Relatório Geral" Command="{Binding Path=RelatorioCommand}"/>
                 </RibbonGroup>
                 <RibbonGroup x:Name="SairGroup" Header="Sair">
-                    <RibbonButton LargeImageSource="Resources/iconfinder_button_blue_stop_40721.png" ToolTip="Fechar aplicação" Label="Fechar" Command="{Binding Path=CloseCommand}" />
+                    <RibbonButton x:Name="btnFechar" LargeImageSource="Resources/iconfinder_button_blue_stop_40721.png" ToolTip="Fechar aplicação" Label="Fechar" Click="btnFechar_Click" />
                 </RibbonGroup>
+                <!--<RibbonGroup x:Name="testeGroup" Header="Relatório Teste">
+                    <RibbonButton LargeImageSource="Resources/iconfinder_button_blue_stop_40721.png" ToolTip="Fechar aplicação" Label="Relatorio" Click="RibbonButton_Click" />
+                </RibbonGroup>-->
             </RibbonTab>
 
             <RibbonTab Header="Administração">

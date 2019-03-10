@@ -86,7 +86,7 @@ namespace Controle_Financeiro.ViewModels
 
         private void Fechar()
         {
-            System.Windows.Application.Current.MainWindow.Close();
+            //System.Windows.Application.Current.MainWindow.Close();
         }
 
         private void CadUser()

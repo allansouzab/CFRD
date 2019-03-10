@@ -1,4 +1,5 @@
 ﻿using Controle_Financeiro.Controls;
+using Controle_Financeiro.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -24,7 +25,7 @@ namespace Controle_Financeiro.Models
         {
             try
             {
-                string sql = "INSERT INTO Receitas(NumFatura, Data, Cliente, Valor, Mes, Ano) VALUES (@NumFatura, @Data, @Cliente, @Valor, @Mes, @Ano)";
+                string sql = "INSERT INTO Receitas(NumFatura, Data, Cliente, Valor, Mes, Ano, Usuario) VALUES (@NumFatura, @Data, @Cliente, @Valor, @Mes, @Ano, @Usuario)";
                 SqlCommand cmd = new SqlCommand(sql);
                 cmd.Connection = AbreConexao();
                 cmd.Parameters.Add(new SqlParameter("@NumFatura", nr.NumFatura));
@@ -33,6 +34,7 @@ namespace Controle_Financeiro.Models
                 cmd.Parameters.Add(new SqlParameter("@Valor", nr.Valor));
                 cmd.Parameters.Add(new SqlParameter("@Mes", nr.Mes));
                 cmd.Parameters.Add(new SqlParameter("@Ano", nr.Ano));
+                cmd.Parameters.Add(new SqlParameter("@Usuario", Session.Usuario));
                 int rows = cmd.ExecuteNonQuery();
 
                 if (rows > 0)
@@ -60,11 +62,12 @@ namespace Controle_Financeiro.Models
             {
                 ObservableCollection<NovaReceitaModel> _receita = new ObservableCollection<NovaReceitaModel>();
 
-                string sql = "SELECT * FROM Receitas WHERE Mes = @Mes AND Ano = @Ano";
+                string sql = "SELECT * FROM Receitas WHERE Mes = @Mes AND Ano = @Ano AND Usuario = @Usuario";
                 SqlCommand cmd = new SqlCommand(sql);
                 cmd.Connection = AbreConexao();
                 cmd.Parameters.Add(new SqlParameter("@Mes", Mes));
                 cmd.Parameters.Add(new SqlParameter("@Ano", Ano));
+                cmd.Parameters.Add(new SqlParameter("@Usuario", Session.Usuario));
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {

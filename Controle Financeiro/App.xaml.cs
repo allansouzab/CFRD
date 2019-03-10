@@ -11,16 +11,22 @@ using System.Windows;
 using System.ComponentModel;
 using Controle_Financeiro.ViewModels;
 using Controle_Financeiro.Views;
+using System.Threading;
 
 namespace Controle_Financeiro
 {
     public partial class App : Application
     {
         private static readonly ILog Log = log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        private static MainWindow app;
+        private static LoginView app;
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            SplashScreen splashScreen = new SplashScreen("SplashScreen_1.png");
+            splashScreen.Show(true);
+            Thread.Sleep(3000);
+            splashScreen.Close(new TimeSpan(0, 0, 1));
+
             Log.Info("Application Startup");
 
             // For catching Global uncaught exception
@@ -29,8 +35,10 @@ namespace Controle_Financeiro
 
             Log.Info("Starting App");
             LogMachineDetails();
-            app = new MainWindow();
-            var context = new MainViewModel();
+            //app = new MainWindow();
+            //var context = new MainViewModel();
+            app = new LoginView();
+            var context = new LoginViewModel();
             app.DataContext = context;
             app.Show();
 

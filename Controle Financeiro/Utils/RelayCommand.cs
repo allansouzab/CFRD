@@ -21,7 +21,7 @@ namespace Controle_Financeiro.Utils
             this.methodToExecute = methodToExecute;
             this.canExecuteEvaluator = canExecuteEvaluator;
         }
-        public RelayCommand(Action methodToExecute)
+        public RelayCommand(Action methodToExecute, object alwaysFalse)
             : this(methodToExecute, null)
         {
         }

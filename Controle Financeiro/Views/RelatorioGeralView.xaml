@@ -31,10 +31,10 @@
             <ComboBoxItem>2022</ComboBoxItem>
             <ComboBoxItem>2023</ComboBoxItem>
         </ComboBox>
-        <Label x:Name="label" Content="Mês" HorizontalAlignment="Left" Margin="49,29,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="label1" Content="Ano" HorizontalAlignment="Left" Margin="222,29,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Button x:Name="btnEnviar" Content="Enviar" HorizontalAlignment="Left" Margin="107,124,0,0" VerticalAlignment="Top" Width="75" Height="25" FontSize="16" Command="{Binding EnviarMesAnoCommand}"/>
-        <Button x:Name="btnFechar" Content="Fechar" HorizontalAlignment="Left" Margin="211,124,0,0" VerticalAlignment="Top" Width="75" Height="25" FontSize="16" Click="btnFechar_Click"/>
+        <Label x:Name="label" Content="Mês" HorizontalAlignment="Left" Margin="44,29,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="label1" Content="Ano" HorizontalAlignment="Left" Margin="218,29,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="btnEnviar" Content="Enviar" HorizontalAlignment="Left" Margin="107,124,0,0" VerticalAlignment="Top" Width="85" Height="30" FontSize="16" Command="{Binding EnviarMesAnoCommand}"/>
+        <Button x:Name="btnFechar" Content="Fechar" HorizontalAlignment="Left" Margin="211,124,0,0" VerticalAlignment="Top" Width="85" Height="30" FontSize="16" Click="btnFechar_Click"/>
 
     </Grid>
 </Window>
