@@ -41,6 +41,7 @@ namespace Controle_Financeiro.ViewModels
 
                 Font fonte = FontFactory.GetFont(BaseFont.TIMES_ROMAN, 14, Font.BOLD, preto);
                 Font conteudo = FontFactory.GetFont(BaseFont.TIMES_ROMAN, 12, Font.NORMAL, preto);
+                Font footer = FontFactory.GetFont(BaseFont.TIMES_ROMAN, 12, Font.BOLD, preto);
                 Font titulo = FontFactory.GetFont(BaseFont.TIMES_ROMAN, 16, Font.BOLD, preto);
                 var contentByte = writer.DirectContent;
 
@@ -133,7 +134,7 @@ namespace Controle_Financeiro.ViewModels
 
                         if (i == nrList.Count)
                         {
-                            Phrase w = new Phrase("-------------", conteudo);
+                            Phrase w = new Phrase("-------------", footer);
                             cell = new PdfPCell(w);
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
@@ -150,7 +151,7 @@ namespace Controle_Financeiro.ViewModels
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
 
-                            Phrase Total = new Phrase("Total", conteudo);
+                            Phrase Total = new Phrase("Total", footer);
                             cell = new PdfPCell(Total);
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
@@ -163,7 +164,7 @@ namespace Controle_Financeiro.ViewModels
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
 
-                            Phrase ValorTotal = new Phrase(SomaValor.ToString("C", CultureInfo.CreateSpecificCulture("en-US")), conteudo);
+                            Phrase ValorTotal = new Phrase(SomaValor.ToString("C", CultureInfo.CreateSpecificCulture("en-US")), footer);
                             cell = new PdfPCell(ValorTotal);
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
 
@@ -261,7 +262,7 @@ namespace Controle_Financeiro.ViewModels
 
                         if (i == nrList.Count)
                         {
-                            Phrase w = new Phrase("-------------", conteudo);
+                            Phrase w = new Phrase("-------------", footer);
                             cell = new PdfPCell(w);
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
@@ -286,7 +287,7 @@ namespace Controle_Financeiro.ViewModels
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
 
-                            Phrase Total = new Phrase("Total", conteudo);
+                            Phrase Total = new Phrase("Total", footer);
                             cell = new PdfPCell(Total);
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
@@ -307,7 +308,7 @@ namespace Controle_Financeiro.ViewModels
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                             table.AddCell(cell);
 
-                            Phrase ValorTotal = new Phrase(SomaValor.ToString("C", CultureInfo.CreateSpecificCulture("en-US")), conteudo);
+                            Phrase ValorTotal = new Phrase(SomaValor.ToString("C", CultureInfo.CreateSpecificCulture("en-US")), footer);
                             cell = new PdfPCell(ValorTotal);
                             cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
 
@@ -472,6 +473,7 @@ namespace Controle_Financeiro.ViewModels
                     paragraph.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
                     if (document.Add(paragraph))
                     {
+                        System.Diagnostics.Process.Start(FilePath);
                         return true;
                     }
                     else
@@ -502,6 +504,7 @@ namespace Controle_Financeiro.ViewModels
                     paragraph.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
                     if (document.Add(paragraph))
                     {
+                        System.Diagnostics.Process.Start(FilePath);
                         return true;
                     }
                     else

@@ -23,6 +23,6 @@
         <Label x:Name="label1_Copy4" Content="Valor" HorizontalAlignment="Left" Margin="36,395,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="23" Margin="36,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" LostFocus="txtValor_LostFocus" Text="{Binding Valor}"/>
         <Button x:Name="btnCadastrarReceita" Content="Cadastrar" HorizontalAlignment="Left" Margin="77,471,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="14" Command="{Binding Path=CadastrarCommand}"/>
-        <Button x:Name="btnFechar" Content="Cancelar" HorizontalAlignment="Left" Margin="180,471,0,0" VerticalAlignment="Top" Width="90" Height="30" FontSize="14" Click="btnFechar_Click" />
+        <Button x:Name="btnFechar" Content="Fechar" HorizontalAlignment="Left" Margin="180,471,0,0" VerticalAlignment="Top" Width="90" Height="30" FontSize="14" Click="btnFechar_Click" />
     </Grid>
 </Window>

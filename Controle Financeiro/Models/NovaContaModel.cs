@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +20,10 @@ namespace Controle_Financeiro.Models
             try
             {
                 string sql = "INSERT INTO Usuarios(Usuario, Senha) VALUES (@Usuario, @Senha)";
-                SqlCommand cmd = new SqlCommand(sql);
+                SQLiteCommand cmd = new SQLiteCommand(sql);
                 cmd.Connection = AbreConexao();
-                cmd.Parameters.Add(new SqlParameter("@Usuario", nc.usuario));
-                cmd.Parameters.Add(new SqlParameter("@Senha", nc.senha));
+                cmd.Parameters.Add(new SQLiteParameter("@Usuario", nc.usuario));
+                cmd.Parameters.Add(new SQLiteParameter("@Senha", nc.senha));
                 int rows = cmd.ExecuteNonQuery();
 
                 if (rows > 0)
@@ -49,10 +50,10 @@ namespace Controle_Financeiro.Models
             try
             {
                 string sql = "SELECT * FROM Usuarios WHERE Usuario = @Usuario";
-                SqlCommand cmd = new SqlCommand(sql);
+                SQLiteCommand cmd = new SQLiteCommand(sql);
                 cmd.Connection = AbreConexao();
-                cmd.Parameters.Add(new SqlParameter("@Usuario", nc.usuario));
-                SqlDataReader dr = cmd.ExecuteReader();
+                cmd.Parameters.Add(new SQLiteParameter("@Usuario", nc.usuario));
+                SQLiteDataReader dr = cmd.ExecuteReader();
                 int rows = 0;
                 while (dr.Read())
                 {

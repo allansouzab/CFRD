@@ -7,6 +7,8 @@ C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Co
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Controle Financeiro.pdb
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\log4net.Fakes.fakesconfig
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MvvmDialogs.4.0.0.0.Fakes.fakesconfig
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\EntityFramework.dll
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\itextsharp.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\log4net.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MaterialDesignColors.dll
@@ -20,6 +22,9 @@ C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Mi
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MvvmDialogs.4.0.0.0.Fakes.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MvvmDialogs.dll
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\System.Data.SQLite.dll
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Xceed.Wpf.AvalonDock.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
@@ -34,12 +39,16 @@ C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Mi
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\Microsoft.MSXML.dll
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\EntityFramework.xml
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\itextsharp.xml
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\log4net.xml
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MvvmDialogs.xml
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\MvvmDialogs.4.0.0.0.Fakes.xml
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\System.Data.SQLite.xml
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
@@ -91,6 +100,8 @@ C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\ro
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Controle Financeiro.csprojFakesResolveAssemblyReference.cache
+C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Controle Financeiro.csprojAssemblyReference.cache
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Views\About.g.cs
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Views\DespesasView.g.cs
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Views\LoginView.g.cs
@@ -122,4 +133,3 @@ C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Co
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Controle Financeiro.csproj.CopyComplete
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Controle Financeiro.exe
 C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Controle Financeiro.pdb
-C:\Users\allan\source\repos\Controle Financeiro\Controle Financeiro\obj\Debug\Controle Financeiro.csprojFakesResolveAssemblyReference.cache

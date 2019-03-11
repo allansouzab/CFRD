@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,17 +28,17 @@ namespace Controle_Financeiro.Models
             try
             {
                 string sql = "INSERT INTO Despesas(NumFatura, Data, Fornecedor, Descricao, CentroCusto, Valor, Mes, Ano, Usuario) VALUES (@NumFatura, @Data, @Fornecedor, @Descricao, @CentroCusto, @Valor, @Mes, @Ano, @Usuario)";
-                SqlCommand cmd = new SqlCommand(sql);
+                SQLiteCommand cmd = new SQLiteCommand(sql);
                 cmd.Connection = AbreConexao();
-                cmd.Parameters.Add(new SqlParameter("@NumFatura", nd.NumFatura));
-                cmd.Parameters.Add(new SqlParameter("@Data", nd.Data));
-                cmd.Parameters.Add(new SqlParameter("@Fornecedor", nd.Fornecedor));
-                cmd.Parameters.Add(new SqlParameter("@Descricao", nd.Descricao));
-                cmd.Parameters.Add(new SqlParameter("@CentroCusto", nd.CentroCusto));
-                cmd.Parameters.Add(new SqlParameter("@Valor", nd.Valor));
-                cmd.Parameters.Add(new SqlParameter("@Mes", nd.Mes));
-                cmd.Parameters.Add(new SqlParameter("@Ano", nd.Ano));
-                cmd.Parameters.Add(new SqlParameter("@Usuario", Session.Usuario));
+                cmd.Parameters.Add(new SQLiteParameter("@NumFatura", nd.NumFatura));
+                cmd.Parameters.Add(new SQLiteParameter("@Data", nd.Data));
+                cmd.Parameters.Add(new SQLiteParameter("@Fornecedor", nd.Fornecedor));
+                cmd.Parameters.Add(new SQLiteParameter("@Descricao", nd.Descricao));
+                cmd.Parameters.Add(new SQLiteParameter("@CentroCusto", nd.CentroCusto));
+                cmd.Parameters.Add(new SQLiteParameter("@Valor", nd.Valor));
+                cmd.Parameters.Add(new SQLiteParameter("@Mes", nd.Mes));
+                cmd.Parameters.Add(new SQLiteParameter("@Ano", nd.Ano));
+                cmd.Parameters.Add(new SQLiteParameter("@Usuario", Session.Usuario));
                 int rows = cmd.ExecuteNonQuery();
 
                 if (rows > 0)
@@ -66,12 +67,12 @@ namespace Controle_Financeiro.Models
                 ObservableCollection<NovaDespesaModel> _despesa = new ObservableCollection<NovaDespesaModel>();
 
                 string sql = "SELECT * FROM Despesas WHERE Mes = @Mes AND Ano = @Ano AND Usuario = @Usuario";
-                SqlCommand cmd = new SqlCommand(sql);
+                SQLiteCommand cmd = new SQLiteCommand(sql);
                 cmd.Connection = AbreConexao();
-                cmd.Parameters.Add(new SqlParameter("@Mes", Mes));
-                cmd.Parameters.Add(new SqlParameter("@Ano", Ano));
-                cmd.Parameters.Add(new SqlParameter("@Usuario", Session.Usuario));
-                SqlDataReader dr = cmd.ExecuteReader();
+                cmd.Parameters.Add(new SQLiteParameter("@Mes", Mes));
+                cmd.Parameters.Add(new SQLiteParameter("@Ano", Ano));
+                cmd.Parameters.Add(new SQLiteParameter("@Usuario", Session.Usuario));
+                SQLiteDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
 
@@ -106,9 +107,9 @@ namespace Controle_Financeiro.Models
             try
             {
                 string sql = "DELETE FROM Despesas WHERE Id = @Id";
-                SqlCommand cmd = new SqlCommand(sql);
+                SQLiteCommand cmd = new SQLiteCommand(sql);
                 cmd.Connection = AbreConexao();
-                cmd.Parameters.Add(new SqlParameter("@Id", nd.Id));
+                cmd.Parameters.Add(new SQLiteParameter("@Id", nd.Id));
                 int rows = cmd.ExecuteNonQuery();
 
                 if (rows > 0)

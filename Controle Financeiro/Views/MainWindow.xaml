@@ -11,7 +11,7 @@
         xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
         md:DialogServiceViews.IsRegistered="True"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="350" Width="525"
+        Title="Controle Financeiro" Height="350" Width="525"
         WindowState="Maximized" ResizeMode="CanMinimize">
 
     <Window.DataContext>
@@ -70,14 +70,14 @@
                 </RibbonGroup>-->
             </RibbonTab>
 
-            <RibbonTab Header="Administração">
+            <!--<RibbonTab Header="Administração">
                 <RibbonGroup x:Name="HomeGroupAdm" Header="Inicio">
                     <RibbonButton LargeImageSource="Resources/iconfinder_back_house_window-home_2222745.png" ToolTip="Navegar para página inicial" Label="Home" Command="{Binding Path=HomeCommand}" />
                 </RibbonGroup>
                 <RibbonGroup x:Name="AdministracaoGroup" Header="Administração">
                     <RibbonButton LargeImageSource="Resources/network.png" ToolTip="Cadastrar novo usuário para acesso ao sistema" Label="Cadastrar Usuário" Command="{Binding Path=CadUserCommand}" />
                 </RibbonGroup>
-            </RibbonTab>
+            </RibbonTab>-->
         </Ribbon>
 
         <StackPanel>

@@ -21,14 +21,6 @@ namespace Controle_Financeiro.ViewModels
     {
         #region Parameters
         private readonly IDialogService DialogService;
-
-        /// <summary>
-        /// Title of the application, as displayed in the top bar of the window
-        /// </summary>
-        public string Title
-        {
-            get { return "Controle_Financeiro"; }
-        }
         #endregion
 
         #region Constructors
