@@ -1,0 +1,26 @@
+﻿<Window x:Class="Controle_Financeiro.Views.NovaReceitaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controle_Financeiro.Views"
+        xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+        md:DialogServiceViews.IsRegistered="True"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Nova Receita" Height="422.561" Width="364.269" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="label" Content="Cadastrar Receita" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="label1" Content="Número de Fatura" HorizontalAlignment="Left" Margin="32,64,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNumFatura" HorizontalAlignment="Left" Height="23" Margin="36,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Text="{Binding NumFatura}"/>
+        <Label x:Name="label1_Copy" Content="Data" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="36,153,0,0" VerticalAlignment="Top" Width="288" SelectedDate="{Binding Path=Data, Mode=TwoWay, StringFormat = {}{0:dd-MM-yyyy}}" />
+        <Label x:Name="label1_Copy1" Content="Cliente" HorizontalAlignment="Left" Margin="34,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCliente" HorizontalAlignment="Left" Height="23" Margin="36,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Text="{Binding Cliente}"/>
+        <Label x:Name="label1_Copy2" Content="Valor" HorizontalAlignment="Left" Margin="33,253,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="23" Margin="36,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" LostFocus="txtValor_LostFocus" Text="{Binding Valor}"/>
+        <Button x:Name="btnCadastrarReceita" Content="Cadastrar" HorizontalAlignment="Left" Margin="79,337,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="14" Command="{Binding Path=CadastrarCommand}"/>
+        <Button x:Name="btnFechar" Content="Fechar" HorizontalAlignment="Left" Margin="182,337,0,0" VerticalAlignment="Top" Width="90" Height="30" FontSize="14" Click="btnFechar_Click" />
+
+    </Grid>
+</Window>

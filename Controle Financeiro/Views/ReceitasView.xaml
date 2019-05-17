@@ -1,0 +1,61 @@
+﻿<Window x:Class="Controle_Financeiro.Views.ReceitasView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controle_Financeiro.Views"
+        xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+        md:DialogServiceViews.IsRegistered="True"
+        mc:Ignorable="d"
+        Title="Receitas" Height="547.39" Width="1024" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize">
+
+    <Grid>
+        <Ribbon>
+            <RibbonTab Header="Inicio">
+                <RibbonGroup x:Name="ReceitasGroup" Header="Funções">
+                    <RibbonButton LargeImageSource="Resources/cart-16.png" ToolTip="Cadastrar novas receitas" Label="Nova Receita" Command="{Binding Path=NovaReceitaCommand}" />
+                    <RibbonButton LargeImageSource="Resources/cart-17.png" ToolTip="Deletar receitas" Label="Deletar Receita" Command="{Binding Path=DeletarReceitaCommand}"/>
+                    <RibbonButton LargeImageSource="Resources/presentation.png" ToolTip="Exportar relatórios de receitas" Label="Gerar Relatório" Command="{Binding Path=RelatorioReceitaCommand}"/>
+                    <RibbonButton LargeImageSource="Resources/iconfinder_button_blue_stop_40721.png" ToolTip="Fechar janela de receitas" Label="Fechar" Click="btnFechar_Click"/>
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+
+
+        <DataGrid x:Name="dataGridReceitas" FontFamily="Calibri" FontSize="16" HorizontalAlignment="Left" Width="972" Height="310" Margin="21,185,0,0" VerticalAlignment="Top" AutoGenerateColumns="False" AlternationCount="2" RowBackground="LightGray" AlternatingRowBackground="WhiteSmoke" SelectedItem="{Binding Path=dgSelectedItem}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID" Visibility="Hidden"/>
+                <DataGridTextColumn Binding="{Binding NumFatura}" Header="Nº Fatura"/>
+                <DataGridTextColumn Binding="{Binding Data, StringFormat = {}{0:dd-MM-yyyy}}" Header="Data"/>
+                <DataGridTextColumn Binding="{Binding Cliente}" Header="Cliente"/>
+                <DataGridTextColumn Binding="{Binding Valor}" Header="Valor"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ComboBox x:Name="cmbMes" FontFamily="Calibri" FontSize="16" HorizontalAlignment="Left" Margin="621,154,0,0" VerticalAlignment="Top" Width="178" SelectionChanged="cmbMes_SelectionChanged" SelectedIndex="{Binding cmbMesIndex}">
+            <ComboBoxItem IsEnabled="False">Selecione um mês</ComboBoxItem>
+            <ComboBoxItem>Janeiro</ComboBoxItem>
+            <ComboBoxItem>Fevereiro</ComboBoxItem>
+            <ComboBoxItem>Março</ComboBoxItem>
+            <ComboBoxItem>Abril</ComboBoxItem>
+            <ComboBoxItem>Maio</ComboBoxItem>
+            <ComboBoxItem>Junho</ComboBoxItem>
+            <ComboBoxItem>Julho</ComboBoxItem>
+            <ComboBoxItem>Agosto</ComboBoxItem>
+            <ComboBoxItem>Setembro</ComboBoxItem>
+            <ComboBoxItem>Outubro</ComboBoxItem>
+            <ComboBoxItem>Novembro</ComboBoxItem>
+            <ComboBoxItem>Dezembro</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="cmbAno" FontFamily="Calibri" FontSize="16" HorizontalAlignment="Left" Margin="815,154,0,0" VerticalAlignment="Top" Width="178" SelectedIndex="{Binding cmbAnoIndex}" SelectionChanged="cmbAno_SelectionChanged">
+            <ComboBoxItem>2019</ComboBoxItem>
+            <ComboBoxItem>2020</ComboBoxItem>
+            <ComboBoxItem>2021</ComboBoxItem>
+            <ComboBoxItem>2022</ComboBoxItem>
+            <ComboBoxItem>2023</ComboBoxItem>
+        </ComboBox>
+        <!--<Button x:Name="button" Content="Novo" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Path=NovaReceitaCommand}" />
+        <Button x:Name="btnDeletar" Content="Deletar" HorizontalAlignment="Left" Margin="102,17,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Path=DeletarReceitaCommand}"/>
+        <Button x:Name="btnFechar" Content="Fechar" HorizontalAlignment="Left" Margin="699,380,0,0" VerticalAlignment="Top" Width="85" Height="30" FontSize="14" Click="btnFechar_Click"/>-->
+    </Grid>
+</Window>
